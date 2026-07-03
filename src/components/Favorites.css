@@ -1,0 +1,79 @@
+.favorites {
+  padding: var(--spacing-section) 0;
+  background-color: white;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.favorites-image-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s;
+}
+
+.favorites-image-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.candies-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.candy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  border-left: 5px solid var(--color-secondary);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.candy-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-left-color: var(--color-primary);
+}
+
+.candy-info h3 {
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.candy-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.candy-price {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.mt-4 {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}
